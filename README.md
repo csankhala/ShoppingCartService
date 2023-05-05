@@ -1,3 +1,12 @@
+## Requirement
+As a customer using an e-commerce website, I want to be able to add products to my shopping cart and have the shopping cart updated in real-time, so that I can keep track of my purchases and make informed decisions about my purchases.
+
+Acceptance Criteria:
+
+- When I add a product to my shopping cart, the shopping cart service should send a message to a Kafka topic called "cart-updated".
+- The Kafka message should contain information about the product that I added, including the product ID, name, and price.
+- If I remove a product from my cart, the shopping cart service should send a message to the "cart-updated" Kafka topic
+
 ## Micronaut 3.9.1 Documentation
 
 - [User Guide](https://docs.micronaut.io/3.9.1/guide/index.html)
