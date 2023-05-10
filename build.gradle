@@ -24,6 +24,9 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api")
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    annotationProcessor 'io.micronaut:micronaut-inject-java:3.8.7'
 }
 
 application {
@@ -47,5 +50,6 @@ micronaut {
     }
 }
 
-
-
+sourceSets {
+    main.java.srcDirs += "build/generated/sources/annotationProcessor/java/main"
+}
