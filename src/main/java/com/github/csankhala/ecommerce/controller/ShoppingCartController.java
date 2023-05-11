@@ -45,4 +45,9 @@ public class ShoppingCartController {
     this.shoppingCartService.delete(customerId);
   }
 
+  @Post(uri="/checkout/{customerId}")
+  public void checkout(@PathVariable long customerId) {
+    this.shoppingCartService.checkout(customerId);
+  }
+
 }
