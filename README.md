@@ -3,9 +3,10 @@ As a customer using an e-commerce website, I want to be able to add products to 
 
 Acceptance Criteria:
 
-- When I add a product to my shopping cart, the shopping cart service should send a message to a Kafka topic called "cart-updated".
+- When I add a product to my shopping cart, the shopping cart service should add product in cart.
+- When I call checkout endpoint, the shopping cart service should send a message to a Kafka topic called "cart-checkout".
 - The Kafka message should contain information about the product that I added, including the product ID, name, and price.
-- If I remove a product from my cart, the shopping cart service should send a message to the "cart-updated" Kafka topic
+- If I remove a product from my cart, the shopping cart service should remove product from cart
 
 ## Micronaut 3.9.1 Documentation
 
